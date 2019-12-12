@@ -1,0 +1,50 @@
+﻿<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>1212</title>
+  <script type="text/javascript">
+
+    function score() {
+      //入力値取得
+      let a = document.forms.f1.textBox.value;
+      //後に評価をresultの部分に反映
+      target = document.getElementById("result");
+      if (a >= 90) {
+        target.innerText = a + "A評価です";
+      } else if (a >= 80) {
+        target.innerText = "B評価です";
+      } else if (a >= 70) {
+        target.innerText = "C";
+      } else if (a >= 60) {
+        target.innerText = "D";
+      } else if (a >= 50) {
+        target.innerText = "E";
+      } else if (a >= 40) {
+        target.innerText = "F";
+      } else if (a >= 30) {
+        target.innerText = "G";
+      } else if (a >= 20) {
+        target.innerText = "H";
+      } else if (a >= 10) {
+        target.innerText = "I";
+      } else {
+        target.innerText = "J";
+      }
+    }
+
+  </script>
+</head>
+
+<body>
+  <h2>1T6 99 岩崎太郎</h2>
+  <form id="f1">
+    <input id="textBox" type="text" value="" />
+    <input type="button" value="採点" onclick="score();" />
+  </form>
+
+  <hr />
+  <div id="result"></div>
+</body>
+
+</html>
