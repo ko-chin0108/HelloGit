@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        html,
+        body {
+            background: #B993D6;
+            background: linear-gradient(to left, #B993D6, #8CA6DB);
+
+
+            justify-content: center;
+
+            overflow: hidden;
+        }
+
+        ul {
+            display: flex;
+            justify-content: space-around;
+
+            padding-left: 0;
+        }
+
+        li {
+            list-style: none;
+            font-size: 2.5em;
+            font-family: 'Oswald', sans-serif;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+        }
+
+        a {
+            color: #444;
+            text-decoration: none;
+            position: relative;
+        }
+
+        a:hover:before {
+            clip: rect(0, 190px, 190px, 0);
+        }
+
+        a:before {
+            position: absolute;
+            left: 0;
+            top: 0;
+            content: attr(data-content);
+            display: inline-block;
+            color: #fff;
+
+            clip: rect(0, 0, 190px, 0);
+            -webkit-transition: clip cubic-bezier(0.25, 0.46, 0.45, 0.94) 500ms;
+            transition: clip cubic-bezier(0.25, 0.46, 0.45, 0.94) 500ms;
+        }
+
+        #hair {
+            text-align: center;
+        }
+
+        .cp_cssslider {
+            width: 1000px;
+
+            overflow: hidden;
+            margin: 2em auto;
+            border: 10px solid #ffffff;
+            box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.5);
+        }
+
+        .cp_slide_item {
+            width: 1000px;
+            height: 700px;
+            float: left;
+            position: relative;
+        }
+
+        .cp_slidewrapper {
+            width: 500%;
+            /* slideの枚数×100% */
+            position: relative;
+            left: 0;
+            animation: slider 20s infinite ease;
+            /* スピード */
+        }
+
+        @-webkit-keyframes slider {
+
+            /* 100%を枚数で割った%に割り振る */
+            0% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+
+            20% {
+                -webkit-transform: translateX(-300px);
+                transform: translateX(-300px);
+            }
+
+            40% {
+                -webkit-transform: translateX(-600px);
+                transform: translateX(-600px);
+            }
+
+            60% {
+                -webkit-transform: translateX(-900px);
+                transform: translateX(-900px);
+            }
+
+            80% {
+                -webkit-transform: translateX(-1200px);
+                transform: translateX(-1200px);
+            }
+
+            100% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slider {
+
+            /* 100%を枚数で割った%に割り振る */
+            0% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+
+            40% {
+                -webkit-transform: translateX(-1000px);
+                transform: translateX(-1000px);
+            }
+
+            60% {
+                -webkit-transform: translateX(-2000px);
+                transform: translateX(-2000px);
+            }
+
+            80% {
+                -webkit-transform: translateX(-1200px);
+                transform: translateX(-1200px);
+            }
+
+            100% {
+                -webkit-transform: translateX(0);
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li><a href="#" data-content="Home">Home</a></li>
+            <li><a href="#" data-content="Hair">Hair</a></li>
+            <li><a href="#" data-content="Menu">Menu</a></li>
+            <li><a href="#" data-content="About">About</a></li>
+        </ul>
+        <div class="cp_cssslider">
+            <div class="cp_slidewrapper">
+                <div class="cp_slide_item"><img src="../../../Photo/0998b7203bdc583838e2898e9961f04e.jpg"></div>
+                <div class="cp_slide_item"><img
+                        src="../../../Photo/178c3b7c4330a5aa104eff074d91dd04a1c76c2484fa2ab645c29207303b2186.jpg"></div>
+                <div class="cp_slide_item"><img src="../../../Photo/IMG_3001.jpg" width="1000px" height="700px"></div>
+            </div>
+        </div>
+</body>
+
+</html>

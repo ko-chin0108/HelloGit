@@ -1,0 +1,33 @@
+﻿<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>1212</title>
+  <script type="text/javascript">
+
+    function score() {
+      //入力値取得
+      let a = document.forms.f1.textBox.value;
+      //結果を反映する場所の指定
+      target = document.getElementById("result");
+      //10で割った数＝ランク
+      let kekka = parseInt(a / 10);
+      let rank = ["J", "I", "H", "G", "F", "E", "D", "C", "B", "A", "A"];
+      target.innerText = `あなたの評価は${rank[kekka]}です`;
+    }
+
+  </script>
+</head>
+
+<body>
+  <h2>1T6 99 岩崎太郎</h2>
+  <form id="f1">
+    <input id="textBox" type="text" value="" />
+    <input type="button" value="採点" onclick="score();" />
+  </form>
+
+  <hr />
+  <div id="result"></div>
+</body>
+
+</html>
