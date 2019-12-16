@@ -6,12 +6,16 @@
   <script type="text/javascript">
 
     function score() {
-      //入力値取得
-      let a = document.forms.f1.textBox.value;
-      let number = document.forms.f1.number.value;
       //結果を反映する場所の指定
       target = document.getElementById("result");
-      //10で割った数＝ランク
+      //入力値取得
+      let a = document.forms.f1.textBox.value;
+      function CheckPattern(value){
+        const pattern =/^n[1290]\d:[1,3]/;
+        kekka=value.match(pattern);
+        return kekka;
+      }
+     //10で割った数＝ランク
       let kekka = parseInt(a / 10);
       let rank = ["J", "I", "H", "G", "F", "E", "D", "C", "B", "A", "A"];
       target.innerText = `${number}さん、あなたの評価は${rank[kekka]}です`;
@@ -27,7 +31,7 @@
   <h2>1T6 99 岩崎太郎</h2>
   <form id="f1">
     点数：<input id="textBox" type="text" value="" />
-    番号：<input id="number" type="text" value="" />
+    番号：<input id="number" type="text" value=""  onblur="CheckPattern()"/>
     <input type="button" value="採点" onclick="score();" />
 
   </form>
