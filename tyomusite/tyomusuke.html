@@ -7,9 +7,9 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ちょむすけ日和</title>
     <style>
-      body{
-          background: cornsilk;
-      }
+        body {
+            background: cornsilk;
+        }
 
         #nav {
             margin-left: 480px;
@@ -25,10 +25,10 @@
             margin: 0 auto;
         }
 
-        a:link,
-        a:visited,
-        a:active {
-
+        #nav a:link,
+        #nav a:visited,
+        #nav a:active {
+            font-size: 20px;
             display: inline-block;
             text-decoration: none;
             color: tan;
@@ -39,10 +39,11 @@
             border: dotted 4px tan;
             text-align: center;
             overflow: hidden;
-            transition: .6s;
+            transition: .5s;
+            background: darkgoldenrod;
         }
 
-        a:hover {
+        #nav a:hover {
             -webkit-transform: rotateY(360deg);
             transform: rotateY(360deg);
         }
@@ -55,9 +56,10 @@
 
         #profile img {
             width: 100px;
-            border-radius: 50%;
+            border-radius: 50%
         }
 
+       
 
         #blog h1,
         #profile h1,
@@ -88,6 +90,49 @@
         #ori {
             filter: drop-shadow(10px 10px 10px);
         }
+
+        #GitButton {
+            position: relative;
+            display: inline-block;
+            font-weight: bold;
+            padding: 12px 0 8px;
+            text-decoration: none;
+            color: darksalmon;
+            transition: .4s;
+        }
+
+        #GitButton:before {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 4px;
+            top: 100%;
+            left: 0;
+            border-radius: 3px;
+            background: darksalmon;
+            transition: .2s;
+        }
+
+        #GitButton:after {
+            position: absolute;
+            content: '';
+            width: 100%;
+            height: 4px;
+            top: 0;
+            left: 0;
+            border-radius: 3px;
+            background: darksalmon;
+            transition: .2s;
+        }
+
+        #GitButton:hover:before {
+            top: -webkit-calc(100% - 3px);
+            top: calc(100% - 3px);
+        }
+
+        #GitButton:hover:after {
+            top: 3px;
+        }
     </style>
 </head>
 
@@ -107,18 +152,23 @@
         <h1>PROFILE</h1>
         <img src="./ちょむ写真/うさちゃん/S__44253187.jpg" alt="pro">
         <h2>ちょむすけ　2018.05.下旬生まれ</h2>
-        <p>ミニウサギ♂。生まれは熊本。</p>
-        <p>生まれて一か月、宮崎のホームセンターにいたところ今のご主人に飼われる。<br>一か月宮崎で過ごし、その後新幹線に乗り神奈川へ引っ越す。</p>
-        <p>小心者だがやるときはやる。</p>
-        <p>チモシー大好き。ご主人ちょろい</p>
-        <h2>ちょむすけの母　2000.01.08生まれ</h2>
-        <p>専門学校に入学し、HTML/CSSを学ぶ。<br>家で飼っているうさぎを溺愛。そして布教したいと思い、Web製作を始める。<br>JavaScript,Reactを勉強中。趣味はうさぎ。</p>
-        <p>取得資格：J検３級、基本情報技術者</p>
+        <p>ミニウサギ♂。熊本生まれ。<br>
+            一か月宮崎で過ごし、その後新幹線に乗り神奈川へ引っ越す。<br>
+            <p>小心者だがやるときはやる。</p>
+            <p>生チモシー大好き。いたずらも大好き。<br>
+                ご主人ちょろい</p>
+            <h2>うしろだ　2000.01.08生まれ</h2>
+            <p>2019年に専門学校に入学し、HTML/CSSを学ぶ。<br>
+                現在はJavaScript,Reactを自主勉強中。<br>
+                ちょむすけを溺愛</p>
+            <p>取得資格：J検３級、基本情報技術者</p>
 
     </div>
     <div id="work">
         <h1>WORK</h1>
-        <p>今後更新予定。頑張ります。</p>
+        <div><br><br></div>
+        <a id="GitButton" href="https://github.com/ko-chin0108/HelloGit.git">うしろだのGitHub</a>
+        <p>今後も更新します！！</p>
     </div>
     <div id="blog">
         <h1>BLOG</h1>
