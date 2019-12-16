@@ -7,42 +7,49 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ちょむすけ日和</title>
     <style>
-       
-        #nav li {
-            display: inline;
-            font-size: 50px;
-        }
-
-        #nav li a{
-            text-decoration: none;
-        }
+      body{
+          background: cornsilk;
+      }
 
         #nav {
-            background: khaki;
+            margin-left: 480px;
         }
 
-        a:link {
-            color: violet;
+        #nav img {
+            margin-left: 160px;
+        }
+
+        #nav li {
+            display: inline;
+            max-width: 50%;
+            margin: 0 auto;
+        }
+
+        a:link,
+        a:visited,
+        a:active {
+
+            display: inline-block;
+            text-decoration: none;
+            color: tan;
+            width: 120px;
+            height: 120px;
+            line-height: 120px;
+            border-radius: 50%;
+            border: dotted 4px tan;
+            text-align: center;
+            overflow: hidden;
+            transition: .6s;
         }
 
         a:hover {
-            color: teal;
+            -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
         }
 
-        #GroomingChomu {
-            width: 700px;
-            margin-left: 100px;
-            position: relative;
-        }
-
-        .logo {
-            width: 300px;
-            position: absolute;
-            top: 30%;
-            left: 40%;
-        }
-
-        #profile {
+        #profile,
+        #work,
+        #blog {
             text-align: center;
         }
 
@@ -51,44 +58,61 @@
             border-radius: 50%;
         }
 
-        #work {
-            text-align: center;
-        }
-
-        #blog {
-            text-align: center;
-            background:khaki;
-        }
 
         #blog h1,
         #profile h1,
         #work h1 {
-            color: darkgoldenrod;
+            margin: auto;
+            color: tan;
+            width: 110px;
+            position: relative;
+            padding: 0.6em;
+            background: -webkit-repeating-linear-gradient(-45deg, #fff5df, #fff5df 4px, #ffe4b1 3px, #ffe4b1 8px);
+            background: repeating-linear-gradient(-45deg, #fff5df, #fff5df 4px, #ffe4b1 3px, #ffe4b1 8px);
+            border-radius: 7px;
         }
-        #photo{
-            margin-top: 0;
-            background-repeat: repeat-x;
+
+
+        h1:after {
+            position: absolute;
+            content: '';
+            top: 100%;
+            left: 100px;
+            border: 15px solid transparent;
+            border-top: 15px solid #ffebbe;
+            width: 0;
+            height: 0;
+        }
+
+        #kusa,
+        #ori {
+            filter: drop-shadow(10px 10px 10px);
         }
     </style>
 </head>
 
 <body>
+
+
+
     <div id="nav">
+        <img class="TopLogo" src="./ちょむ写真/うさちゃん/ウサギロゴ（茶色）.png" alt="ロゴ">
         <ul>
             <li><a href="#profile">PROFILE</a></li>
             <li><a href="#work">WORK</a></li>
             <li><a href="#blog">BLOG</a></li>
         </ul>
     </div>
-    <div id="GroomingChomu">
-        <img src="../tyomusite/ちょむ写真/うさちゃん/S__34930700.jpg" alt="グルーミングちょむ">
-    </div>
-    <img class="logo" src="./ちょむ写真/うさちゃん/ウサギロゴ（茶色）.png" alt="ロゴ">
     <div id="profile">
         <h1>PROFILE</h1>
         <img src="./ちょむ写真/うさちゃん/S__44253187.jpg" alt="pro">
-        <h2>ちょむすけ母　H12.01.08生まれ</h2>
-        <p>専門学校に入学し、HTML/CSSを学ぶ。<br>家で飼っているうさぎを布教したいと思い、Web製作を始める。<br>JavaScript,Reactを勉強中。趣味はうさぎ。</p>
+        <h2>ちょむすけ　2018.05.下旬生まれ</h2>
+        <p>ミニウサギ♂。生まれは熊本。</p>
+        <p>生まれて一か月、宮崎のホームセンターにいたところ今のご主人に飼われる。<br>一か月宮崎で過ごし、その後新幹線に乗り神奈川へ引っ越す。</p>
+        <p>小心者だがやるときはやる。</p>
+        <p>チモシー大好き。ご主人ちょろい</p>
+        <h2>ちょむすけの母　2000.01.08生まれ</h2>
+        <p>専門学校に入学し、HTML/CSSを学ぶ。<br>家で飼っているうさぎを溺愛。そして布教したいと思い、Web製作を始める。<br>JavaScript,Reactを勉強中。趣味はうさぎ。</p>
         <p>取得資格：J検３級、基本情報技術者</p>
 
     </div>
@@ -101,11 +125,11 @@
         <p>わたしのペット</p>
         <p>『ちょむすけ』</p>
         <p>をご紹介します。</p>
-        <img src="./ちょむ写真/うさちゃん/おれんちのうさぎ_190605_0011.jpg" alt="" width="300px">
+        <img id="kusa" src="./ちょむ写真/うさちゃん/おれんちのうさぎ_190605_0011.jpg" alt="" width="300px">
         <p>おさんぽしたり</p>
+        <img id="ori" src="./ちょむ写真/うさちゃん/おれんちのうさぎ_190605_0006.jpg" alt="" width="300px"><br>
         <p>まったりしたり・・・</p>
-        <img src="./ちょむ写真/うさちゃん/おれんちのうさぎ_190605_0006.jpg" alt="" width="300px"><br>    
-        </div>
-    </body>
+    </div>
+</body>
 
 </html>
