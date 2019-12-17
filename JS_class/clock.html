@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>現在時刻</title>
+    <style>
+        #clockArea {
+            font-size: 50px;
+            color: darkblue;
+        }
+    </style>
+</head>
+
+<body>
+    <p id="clockArea"></p>
+</body>
+<script>
+    function SetNum(num) {
+        let ret = "0";
+        if (num < 10) {
+            ret = ret + num;
+        } else {
+            ret = num;
+        }
+        return ret;
+    }
+    function Clock() {
+        let NowTime = new Date();
+        let Month = SetNum(NowTime.getUTCMonth()+1);
+        let Day = SetNum(NowTime.getUTCDate());
+        let NowH = SetNum(NowTime.getHours());
+        let NowM = SetNum(NowTime.getMinutes());
+        let NowS = SetNum(NowTime.getSeconds());
+        let msg = Month+"/"+Day+"."+NowH + ":" + NowM + ":" + NowS;
+        document.getElementById("clockArea").innerHTML = msg;
+    }
+    setInterval('Clock()', 1000);
+</script>
+
+</html>
