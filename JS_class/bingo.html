@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#444444">
+  <title>bingo</title>
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  
+  <style>
+  body {
+  color: #004c8c;
+  font-family: arial, sans-serif;
+}
+
+.wrapper {
+  margin: 0 auto;
+}
+
+.result {
+  align-items: center;
+  border: solid 1px #004c8c;
+  display: flex;
+  font-size: 130px;
+  font-weight: bold;
+  justify-content: center;
+  height: 200px;
+  margin: 0 auto 10px;
+  text-align: center;
+  width: 200px;
+}
+
+.number {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+  width: 500px;
+}
+
+@media (max-width: 767px) {
+  .number {
+    width: 100%;
+  }
+}
+
+.number li {
+  align-items: center;
+  border: solid 1px #004c8c;
+  display: flex;
+  justify-content: center;
+  height: 40px;
+  margin: 4px;
+  width: 40px;
+}
+
+.number li.hit {
+  background: #004c8c;
+  color: #fff;
+}
+
+.wrapper-button {
+  padding: 20px 0 50px;
+  text-align: center;
+}
+
+.button {
+  background: #004c8c;
+  border: dashed 1px #ffffff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px #004c8c;
+  color: #ffffff;
+  display: inline-block;
+  font-size: 20px;
+  text-decoration: none;
+  height: 100px;
+  line-height: 100px;
+  overflow: hidden;
+  text-align: center;
+  transition: .4s;
+  vertical-align: middle;
+  width: 100px;
+}
+
+.button:hover {
+  background: #668ad8;
+  box-shadow: 0 0 0 5px #668ad8;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+}
+  </style>
+</head>
+<body>
+<div class="wrapper">
+  <div id="result" class="result"></div>
+  <ul id="number" class="number"></ul>
+  <div class="wrapper-button">
+    <button id="button" class="button">START</button>
+  </div>
+
+  <audio id="sound-play" preload="auto">
+    <source src="start.mp3" type="audio/mp3">
+  </audio>
+  <audio id="sound-pause" preload="auto">
+    <source src="pause.mp3" type="audio/mp3">
+  </audio>
+  
+</div>
+<script>
+$(function(){
+  "use strict";
+
+  var
+    max = 50,
+    bingo = [],
+    status = true,
+    roulette,
+    random,
+    number,
+    result,
+    $number = $("#number"),
+    $result = $("#result"),
+    $sound_play = $("#sound-play"),
+    $sound_pause = $("#sound-pause");
+
+  for(var i = 1; i <= max; i++) {
+    bingo.push(i);
+    $number.append($("<li>").text(("0" + i).slice(-2)));
+  }
+
+  $("#button").on("click", function(){
+    if(status) {
+      status = false;
+      $(this).text("STOP");
+      $sound_play.trigger("play");
+      $sound_pause.trigger("pause");
+      $sound_pause[0].currentTime = 0;
+
+      roulette = setInterval(function(){
+        random = Math.floor(Math.random() * bingo.length);
+        number = bingo[random];
+        $result.text(number);
+      }, 10);
+    } else {
+      status = true;
+      $(this).text("START");
+      $sound_pause.trigger("play");
+      $sound_play.trigger("pause");
+      $sound_play[0].currentTime = 0;
+
+      clearInterval(roulette);
+
+      result = bingo[random];
+      bingo.splice(random, 1);
+
+      $result.text(result);
+      $number.find("li").eq(parseInt(result, 10) - 1).addClass("hit");
+    }
+  });
+});
+</script>
+</body>
+</html>
