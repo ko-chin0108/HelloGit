@@ -6,140 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>ちょむすけ日和</title>
-    <style>
-        body {
-            background: cornsilk;
-        }
-
-        #nav {
-            margin-left: 480px;
-        }
-
-        #nav img {
-            margin-left: 160px;
-        }
-
-        #nav li {
-            display: inline;
-            max-width: 50%;
-            margin: 0 auto;
-        }
-
-        #nav a:link,
-        #nav a:visited,
-        #nav a:active {
-            font-size: 20px;
-            display: inline-block;
-            text-decoration: none;
-            color: tan;
-            width: 120px;
-            height: 120px;
-            line-height: 120px;
-            border-radius: 50%;
-            border: dotted 4px tan;
-            text-align: center;
-            overflow: hidden;
-            transition: .5s;
-            background: darkgoldenrod;
-        }
-
-        #nav a:hover {
-            -webkit-transform: rotateY(360deg);
-            transform: rotateY(360deg);
-        }
-
-        #profile,
-        #work,
-        #blog {
-            text-align: center;
-        }
-
-        #profile img {
-            width: 100px;
-            border-radius: 50%
-        }
-
-       
-
-        #blog h1,
-        #profile h1,
-        #work h1 {
-            margin: auto;
-            color: tan;
-            width: 110px;
-            position: relative;
-            padding: 0.6em;
-            background: -webkit-repeating-linear-gradient(-45deg, #fff5df, #fff5df 4px, #ffe4b1 3px, #ffe4b1 8px);
-            background: repeating-linear-gradient(-45deg, #fff5df, #fff5df 4px, #ffe4b1 3px, #ffe4b1 8px);
-            border-radius: 7px;
-        }
-
-
-        h1:after {
-            position: absolute;
-            content: '';
-            top: 100%;
-            left: 100px;
-            border: 15px solid transparent;
-            border-top: 15px solid #ffebbe;
-            width: 0;
-            height: 0;
-        }
-
-        #kusa,
-        #ori {
-            filter: drop-shadow(10px 10px 10px);
-        }
-
-        #GitButton {
-            position: relative;
-            display: inline-block;
-            font-weight: bold;
-            padding: 12px 0 8px;
-            text-decoration: none;
-            color: darksalmon;
-            transition: .4s;
-        }
-
-        #GitButton:before {
-            position: absolute;
-            content: '';
-            width: 100%;
-            height: 4px;
-            top: 100%;
-            left: 0;
-            border-radius: 3px;
-            background: darksalmon;
-            transition: .2s;
-        }
-
-        #GitButton:after {
-            position: absolute;
-            content: '';
-            width: 100%;
-            height: 4px;
-            top: 0;
-            left: 0;
-            border-radius: 3px;
-            background: darksalmon;
-            transition: .2s;
-        }
-
-        #GitButton:hover:before {
-            top: -webkit-calc(100% - 3px);
-            top: calc(100% - 3px);
-        }
-
-        #GitButton:hover:after {
-            top: 3px;
-        }
-    </style>
+    <link rel="stylesheet" href="tyomusuke.css">
 </head>
 
 <body>
-
-
-
+    
     <div id="nav">
         <img class="TopLogo" src="./ちょむ写真/うさちゃん/ウサギロゴ（茶色）.png" alt="ロゴ">
         <ul>
@@ -152,16 +23,14 @@
         <h1>PROFILE</h1>
         <img src="./ちょむ写真/うさちゃん/S__44253187.jpg" alt="pro">
         <h2>ちょむすけ　2018.05.下旬生まれ</h2>
-        <p>ミニウサギ♂。熊本生まれ。<br>
-            一か月宮崎で過ごし、その後新幹線に乗り神奈川へ引っ越す。<br>
-            <p>小心者だがやるときはやる。</p>
-            <p>生チモシー大好き。いたずらも大好き。<br>
-                ご主人ちょろい</p>
-            <h2>うしろだ　2000.01.08生まれ</h2>
-            <p>2019年に専門学校に入学し、HTML/CSSを学ぶ。<br>
-                現在はJavaScript,Reactを自主勉強中。<br>
-                ちょむすけを溺愛</p>
-            <p>取得資格：J検３級、基本情報技術者</p>
+        <p>小心者だがやるときはやる。</p>
+        <p>生チモシー大好き。いたずらも大好き。<br>
+            ご主人ちょろい</p>
+        <h2>うしろだ　2000.01.08生まれ</h2>
+        <p>2019年に専門学校に入学し、HTML/CSSを学ぶ。<br>
+            現在はJavaScript,Reactを自主勉強中。<br>
+            ちょむすけを溺愛</p>
+        <p>取得資格：J検３級、基本情報技術者</p>
 
     </div>
     <div id="work">
@@ -179,6 +48,16 @@
         <p>おさんぽしたり</p>
         <img id="ori" src="./ちょむ写真/うさちゃん/おれんちのうさぎ_190605_0006.jpg" alt="" width="300px"><br>
         <p>まったりしたり・・・</p>
+        <h2>ちょむすけ♂</h2>
+        <ul>
+            <li>種類：ミニウサギ</li>
+            <li>生まれ：熊本</li>
+        </ul>
+        <img src="./ちょむ写真/うさちゃん/おれんちのうさぎ_190605_0052.jpg" alt="" width="300px">
+        <p>宮崎でご主人と出会う</p>
+        <img src="./ちょむ写真/うさちゃん/おれんちのうさぎ_190605_0042.jpg" alt="" width="300px">
+        <p>宮崎で１ヶ月過ごす</p>
+        <img src="./ちょむ写真/うさちゃん/おれんちのうさぎ_190605_0050.jpg" alt="" width="300px">
     </div>
 </body>
 
