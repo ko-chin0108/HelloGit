@@ -10,7 +10,7 @@
     <h1>a</h1>
     <?php
     $num = 15;
-    echo $num;
+    echo '{$num}番';
     ?>
 </body>
 </html>
