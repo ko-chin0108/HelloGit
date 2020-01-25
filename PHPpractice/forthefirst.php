@@ -7,10 +7,8 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>a</h1>
     <?php
-    $num = 15;
-    echo '{$num}番';
+   print('PHPを勉強中です');
     ?>
 </body>
 </html>
