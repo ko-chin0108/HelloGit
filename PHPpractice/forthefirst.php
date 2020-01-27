@@ -31,14 +31,24 @@
     foreach($fruits as $name => $kudamono){
         print($name.":".$kudamono);
     }
+    //時間が９～１９なら
     if(date('H')>9&&date('H')<20){
         print('ようこそ');
     }else{
         print('時間外です');
     }
+    //小数点切り上げ,1指定すると小数第一位まで表示
     echo(floor(100/3000*100));
+    //四捨五入
     echo(round(100/3000*100));
+    //切り上げ
     echo(ceil(100/3000*100));
+    $success = file_put_contents('../PHPpractice/news.txt','2019/1/26 完了');
+    if($success){
+        print('書き込み完了');
+    }else{
+        print('失敗');   
+    }
     
     ?>
 </body>
