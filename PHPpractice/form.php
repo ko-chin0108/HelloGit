@@ -4,3 +4,5 @@
 foreach($_POST['week']as $week){
     print(htmlspecialchars($week,ENT_QUOTES.''));
 }?>
+コメント<?php print(htmlspecialchars($_REQUEST['text'],ENT_QUOTES));?>
+s
