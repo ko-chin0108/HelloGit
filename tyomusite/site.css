@@ -1,27 +1,33 @@
+body {
+  margin: 0px;
+}
 .site-header {
   background: #fff;
   display: flex;
   padding: 7px 50px;
   position: fixed;
   width: 100%;
-  opacity: 0.7;
+  opacity: 0.7; /*ヘッダーの透明度*/
   height: 70px;
   z-index: 100;
 }
 
-.nav-contents{
-display: flex;
-    line-height: 70px;
-    list-style: none;
-    padding-left: 100px;
+.nav-contents {
+  display: flex;
+  line-height: 70px;
+  list-style: none;
+  margin-top: 0%;
 }
 
-.nav-contents-item{
-    display: flex;
-    line-height: 70px;
-    list-style: none;
-    padding-left: 100px;
-    margin-left: 5em;
+div {
+  display: block;
+}
+.nav-contents-item {
+  font-size: 3vh;
+  line-height: 70px;
+  list-style: none;
+  padding-left: 100px;
+  margin-left: 5em;
 }
 
 a {
@@ -42,4 +48,63 @@ li {
   background-attachment: fixed;
   background-size: cover;
   background-position: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+#profile {
+  width: 980px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.profile-left {
+  padding-top: 150px;
+}
+
+.img-left {
+  float: left;
+  padding-top: 50px;
+  padding-left: 30px;
+  width: 390px;
+}
+
+.text-right {
+  float: right;
+  width: 430px;
+  text-align: left;
+  padding-top: 150px;
+}
+
+.text-left{
+    padding-top: 500px;
+}
+
+.img-right {
+  float: right;
+  width: 315px;
+  padding-right: 30px;
+  padding-top: 200px;
+  padding-bottom: 100px;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
+.bg02 {
+  clear: both;
+  background-image: url(../tyomusite/ちょむ写真/bgrabit.png);
+  min-height: 25vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  background-color: thistle;
 }
