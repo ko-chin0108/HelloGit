@@ -1,0 +1,45 @@
+.site-header {
+  background: #fff;
+  display: flex;
+  padding: 7px 50px;
+  position: fixed;
+  width: 100%;
+  opacity: 0.7;
+  height: 70px;
+  z-index: 100;
+}
+
+.nav-contents{
+display: flex;
+    line-height: 70px;
+    list-style: none;
+    padding-left: 100px;
+}
+
+.nav-contents-item{
+    display: flex;
+    line-height: 70px;
+    list-style: none;
+    padding-left: 100px;
+    margin-left: 5em;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  display: inline;
+}
+
+.bg01 {
+  background-image: url(../tyomusite/ちょむ写真/うさちゃん/S__37920967.jpg);
+}
+
+.fixed-bg01 {
+  min-height: 100vh;
+  min-width: 100vh;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
