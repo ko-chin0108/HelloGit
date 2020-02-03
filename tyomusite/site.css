@@ -79,8 +79,8 @@ h1 {
   padding-top: 150px;
 }
 
-.text-left{
-    padding-top: 500px;
+.text-left {
+  padding-top: 500px;
 }
 
 .img-right {
@@ -108,3 +108,16 @@ p {
   background-position: center;
   background-color: thistle;
 }
+
+.news {
+  text-align: center;
+  width: 980px;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 100px;
+}
+
+.news h1{
+    padding-bottom: 70px;
+}
+
