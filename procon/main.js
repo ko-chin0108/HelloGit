@@ -1,4 +1,4 @@
-// https://github.com/tsuyopon-xyz/drawing_app_part1/blob/master/main.js
+
 // 上記のコードを元に以下の追加機能を追加します。
 // - 線の色を変更する機能
 // - 消しゴム機能
@@ -76,7 +76,6 @@ window.addEventListener("load", () => {
     const joe = colorjoe.rgb("color-palette", currentColor);
 
     // 'done'イベントは、カラーパレットから色を選択した時に呼ばれるイベント
-    // ドキュメント: https://github.com/bebraw/colorjoe#event-handling
     joe.on("done", color => {
       // コールバック関数の引数からcolorオブジェクトを受け取り、
       // このcolorオブジェクト経由で選択した色情報を取得する
